@@ -18,7 +18,61 @@
 <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
 </div>
 
+<div class="sample-rating-card">
+    <h1>How it works</h1>
+    <div>
+        <p>Select one to begin</p>
+        <br>
+        <h2>Step 1</h2>
+        <span>{{radio.text}}</span>
+        <br>
+        <plat-radio plat-bind="radio.text">very interested</plat-radio>
+        <br>
+        <plat-radio plat-bind="radio.text">somewhat interested</plat-radio>
+        <br>
+        <plat-radio plat-bind="radio.text">not interested at all</plat-radio>
+        <br>
+    </div>
+
+    <div class="bodypart-select">
+    <h2>Step 2:</h2>
+    <p>Choose a body part</p>
+    <plat-select plat-context="parts">
+        <option value="{{id}}">{{text}}</option>
+    </plat-select>
+    </div>
+
+    <div class="distance-slider">
+        <h2>Step 3:</h2>
+        <p>Choose a geographic area</p>
+        <span>Distance: {{slider.distance}} miles</span>
+        <plat-slider plat-bind="slider.distance" plat-options="{ min: 5, max: 25 }"></plat-slider>
+    </div>
+    <div class="show-results">
+        <plat-button class="button-primary">Show Hospitals</plat-button>
+    </div>
+    <br>
+
+    <div class="button-group">
+        <plat-button plat-options="{ group: 'controls' }" class="button-success"><i class="fa fa-smile-o" aria-hidden="true"></i><b>Go</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-caution"><i class="fa fa-meh-o" aria-hidden="true"></i><b>Maybe</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-danger"><i class="fa fa-frown-o" aria-hidden="true"></i><b>Why</b> here</plat-button>
+    </div>
+    <br>
+    <div class="card-container">
+        <div class="button-group card-row">
+            <plat-button plat-options="{ group: 'controls' }" class="button-success">Hospital Name</plat-button>
+            <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">JoePatient</plat-button>
+            <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">User Stories</plat-button>
+        </div>
+        <div class="card-content">
+
+        </div>
+    </div>
+
 <div class="bottom-container">
-    <h2>thing 3</h2>
-    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    <h2>Testamonials</h2>
+        <blockquote>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+        <cite>-Johnny Appleseed</cite></blockquote>
+    </div>
 </div>

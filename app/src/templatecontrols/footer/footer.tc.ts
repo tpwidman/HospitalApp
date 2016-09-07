@@ -7,8 +7,7 @@ export default class FooterTemplateControl extends ui.TemplateControl {
     };
     toggleModal(): void {
         this.context.modal1 = !this.context.modal1;
-    }
-
+    };
 }
 
 register.control('footer', FooterTemplateControl);

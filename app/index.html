@@ -10,13 +10,23 @@
         <title>Hospital App</title>
     </head>
     <body>
-        <plat-navbar></plat-navbar>
+        <!--Navbar-->
+        <navbar></navbar>
         <br/>
+        <!--Viewport-->
         <plat-viewport></plat-viewport>
-        <footer class="footer"><a href="https://www.google.com">take me to google </a><a href="https://www.google.com">or google </a><a href="https://www.google.com"> even google </a></footer>
-        <plat-drawer>
+        <!--Footer-->
+        <footer class="footer">
+            <div class="footer-content">
+                <a href="https://www.google.com"><i class="fa fa-google" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.reddit.com"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+            </div>    
+        </footer>
+        
+        <plat-modal>
             <button>foo</button>
-        </plat-drawer>
+        </plat-modal>
 
         <script type="text/javascript" src="dist/app.js"></script>
     </body>

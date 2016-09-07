@@ -23,15 +23,23 @@
     <div>
         <p>Select one to begin</p>
         <br>
-        <h2>Step 1</h2>
-        <span>{{radio.text}}</span>
-        <br>
-        <plat-radio plat-bind="radio.text">very interested</plat-radio>
-        <br>
-        <plat-radio plat-bind="radio.text">somewhat interested</plat-radio>
-        <br>
-        <plat-radio plat-bind="radio.text">not interested at all</plat-radio>
-        <br>
+        <div class="button-group ">
+            <plat-button plat-options="{ group: 'controls' }" class="button-primary button-outline"><i class="fa fa-hospital-o" aria-hidden="true"></i><br>Hospitals</plat-button>
+            <plat-button plat-options="{ group: 'controls' }" class="button-primary button-outline"><i class="fa fa-user-md" aria-hidden="true"></i><br>MD's</plat-button>
+            <plat-button plat-options="{ group: 'controls' }" class="button-primary button-outline"><i class="fa fa-home" aria-hidden="true"></i><br>Nursing Homes</plat-button>
+        </div>
+    </div>
+    <div>
+        <h2>Step 1:</h2>
+            <span>{{radio.text}}</span>
+            <br>
+        <p>Select a category of care</p>
+            <plat-radio plat-bind="radio.text">Emergency</plat-radio>
+            <br>
+            <plat-radio plat-bind="radio.text">Children's</plat-radio>
+            <br>
+            <plat-radio plat-bind="radio.text">Adult</plat-radio>
+            <br>
     </div>
 
     <div class="bodypart-select">
@@ -54,14 +62,14 @@
     <br>
 
     <div class="button-group">
-        <plat-button plat-options="{ group: 'controls' }" class="button-success"><i class="fa fa-smile-o" aria-hidden="true"></i><b>Go</b> here</plat-button>
-        <plat-button plat-options="{ group: 'controls' }" class="button-caution"><i class="fa fa-meh-o" aria-hidden="true"></i><b>Maybe</b> here</plat-button>
-        <plat-button plat-options="{ group: 'controls' }" class="button-danger"><i class="fa fa-frown-o" aria-hidden="true"></i><b>Why</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-success"><i class="fa fa-smile-o" aria-hidden="true"></i><br><b>Go</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-caution"><i class="fa fa-meh-o" aria-hidden="true"></i><br><b>Maybe</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-danger"><i class="fa fa-frown-o" aria-hidden="true"></i><br><b>Why</b> here</plat-button>
     </div>
     <br>
     <div class="card-container">
         <div class="button-group card-row">
-            <plat-button plat-options="{ group: 'controls' }" class="button-success">Hospital Name</plat-button>
+            <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">Hospital Name</plat-button>
             <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">JoePatient</plat-button>
             <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">User Stories</plat-button>
         </div>

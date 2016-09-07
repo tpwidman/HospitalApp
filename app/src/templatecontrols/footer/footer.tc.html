@@ -1,29 +1,39 @@
 <div class="footer">
     <div class="row">
+
+        <!--left-->
         <div class="col-dsk-4">
-            <h1>Connect with us</h1>
+            <h3>Connect with us</h3>
             <a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i> twitter</a>
             <a href="https://www.facebook.com"> <i class="fa fa-facebook" aria-hidden="true"></i> facebook</a>
             <a href="https://www.reddit.com"><i class="fa fa-reddit" aria-hidden="true"></i> reddit</a>
         </div>
+
+        <!--center-->
         <div class="col-dsk-4">
-            <div class="app-download">
-            <h1>Download the app</h1>
-            <div class="right">
-                <a href="">
-                    <h2>iOS</h2>
-                    <p>click here</p>
-                </a>
+        <!-- Button that calls the modal -->
+        <div class="app-download">
+            <h3>Download the app</h3>
+        <plat-button class="button-primary" plat-tap="toggleModal('modal1')">Show Modal</plat-button>
+            <!-- The Modal -->
+        <plat-modal plat-options="{ transition: 'fade' }" plat-bind="modals.modal1" class="modal-prompt">
+            <div class="prompt-title">Download here</div>
+            <div class="prompt-body">
+                <p>Select type:</p>
             </div>
-            <div class="left">
-                <a href="">
-                <h2>Android</h2>
-                <p>click here</p>
-                </a>
+            <div class="prompt-action">
+                <plat-button class="button-danger" plat-tap="toggleModal('modal1')">Close</plat-button>
+                <plat-button class="button-danger" plat-tap="toggleModal('modal1')">Close</plat-button>
+                <plat-button class="button-danger" plat-tap="toggleModal('modal1')">Close</plat-button>
             </div>
-            </div>
+        </plat-modal>
         </div>
+
+        </div>
+
+        <!--right-->
         <div class="col-dsk-4">
+            <h3>Shoot us a message</h3>
             <div class="input-group">
                 <div class="row">
                     <plat-input type="text" placeholder="Name"></plat-input>
@@ -35,6 +45,7 @@
         </div>
     </div>
     <div class="app-logo">
-        <h1>JoePatient</h1>
+        <p><i class="fa fa-copyright" aria-hidden="true"></i> 2016 JoePatient</p>
+        <p><a href="tel:18888888888"><i class="fa fa-phone-square" aria-hidden="true">  1-888-888-8888</i></a></p>
     </div>
 </div>    

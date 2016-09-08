@@ -59,12 +59,13 @@
     <div class="show-results">
         <plat-button class="button-primary">Show Hospitals</plat-button>
     </div>
+     <span>{{radio.text}}, {{slider.distance}} miles, Hospitals</span>
     <br>
 
     <div class="button-group">
-        <plat-button plat-options="{ group: 'controls' }" class="button-success"><i class="fa fa-smile-o" aria-hidden="true"></i><br><b>Go</b> here</plat-button>
-        <plat-button plat-options="{ group: 'controls' }" class="button-caution"><i class="fa fa-meh-o" aria-hidden="true"></i><br><b>Maybe</b> here</plat-button>
-        <plat-button plat-options="{ group: 'controls' }" class="button-danger"><i class="fa fa-frown-o" aria-hidden="true"></i><br><b>Why</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-success" plat-tap="goHere()"><i class="fa fa-smile-o" aria-hidden="true"></i><br><b>Go</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-caution" plat-tap="maybeHere()"><i class="fa fa-meh-o" aria-hidden="true"></i><br><b>Maybe</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-danger" plat-tap="whyHere()"><i class="fa fa-frown-o" aria-hidden="true"></i><br><b>Why</b> here</plat-button>
     </div>
     <br>
     <div class="card-container">

@@ -15,6 +15,5 @@ declare module models {
         cost: number;
         address: string;
         phone: string;
-        
     }
 }

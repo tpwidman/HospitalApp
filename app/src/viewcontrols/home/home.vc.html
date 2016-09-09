@@ -20,7 +20,7 @@
 
 <div class="sample-rating-card">
     <h1>How it works</h1>
-    <div>
+    <div class="first-div">
         <h2>Step 1:</h2>
         <p>Select one to begin</p>
         <br>
@@ -65,22 +65,20 @@
             </div>
         <br>
 
-        <div class="button-group">
             <plat-button plat-options="{ group: 'controls' }" class="button-success" plat-tap="goHere()"><i class="fa fa-smile-o" aria-hidden="true"></i><br><b>Go</b> here</plat-button>
             <plat-button plat-options="{ group: 'controls' }" class="button-caution" plat-tap="maybeHere()"><i class="fa fa-meh-o" aria-hidden="true"></i><br><b>Maybe</b> here</plat-button>
             <plat-button plat-options="{ group: 'controls' }" class="button-danger" plat-tap="whyHere()"><i class="fa fa-frown-o" aria-hidden="true"></i><br><b>Why</b> here</plat-button>
-        </div>
         <br>
         <div class="card-container">
             <div class="button-group card-row">
-                <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">Hospital Name</plat-button>
-                <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">JoePatient</plat-button>
-                <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">User Stories</plat-button>
+                <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">Hospital Name</plat-button>
+                <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">JoePatient</plat-button>
+                <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">User Stories</plat-button>
             </div>
             <div class="card-content">
                 <p>blah, blah, blah</p>
             </div>
-
+            <plat-button class="button-primary button-outline">Refresh</plat-button>
         </div>
         </div>
     </div>

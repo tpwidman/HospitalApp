@@ -16,14 +16,16 @@
             <h3>Download the app</h3>
         <plat-button class="button-primary" plat-tap="toggleModal('modal1')">Show Modal</plat-button>
             <!-- The Modal -->
-        <plat-modal plat-options="{ transition: 'fade' }" plat-bind="modals.modal1" class="modal-prompt">
+        <plat-modal plat-options="{ transition: 'fade' }" plat-bind="modal1" class="modal-prompt">
             <div class="prompt-title">Download here</div>
             <div class="prompt-body">
                 <p>Select type:</p>
             </div>
             <div class="prompt-action">
-                <plat-button class="button-danger" plat-tap="toggleModal('modal1')">Close</plat-button>
-                <plat-button class="button-danger" plat-tap="toggleModal('modal1')">Close</plat-button>
+                <div class="row">
+                <plat-button class="button-primary button-outline" plat-tap="toggleModal('modal1')">Android</plat-button>
+                <plat-button class="button-primary button-outline" plat-tap="toggleModal('modal1')">iOS</plat-button>
+                </div>
                 <plat-button class="button-danger" plat-tap="toggleModal('modal1')">Close</plat-button>
             </div>
         </plat-modal>
@@ -35,11 +37,9 @@
         <div class="col-dsk-4">
             <h3>Shoot us a message</h3>
             <div class="input-group">
-                <div class="row">
                     <plat-input type="text" placeholder="Name"></plat-input>
                     <plat-input type="email" placeholder="Email"></plat-input>
-                </div>
-                <plat-input type="text" placeholder="Message"></plat-input>
+                    <plat-input type="text" placeholder="Message"></plat-input>
                 <plat-button class="button-primary">Submit</plat-button>
             </div>
         </div>

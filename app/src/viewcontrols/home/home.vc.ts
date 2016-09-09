@@ -1,4 +1,4 @@
-import {register} from 'platypus';
+import {controls, events, register, ui, web} from 'platypus';
 import BaseViewControl from '../base/base.vc';
 
 export default class HomeViewControl extends BaseViewControl {
@@ -16,8 +16,12 @@ export default class HomeViewControl extends BaseViewControl {
             { id: 2, text:'Stomach and Digestive System' },
             { id: 3, text:'Brain and Nervous System' },
             { id: 4, text:'Joints and Bones' }
-            ]
-    }
+            ],
+        results: false
+    };
+    toggleResults(): void {
+        this.context.results = !this.context.results;
+    };
 }
 
 register.viewControl('home-vc', HomeViewControl);

@@ -21,17 +21,17 @@
 <div class="sample-rating-card">
     <h1>How it works</h1>
     <div>
+        <h2>Step 1:</h2>
         <p>Select one to begin</p>
         <br>
-        <div class="button-group ">
+        <div class="row ">
             <plat-button plat-options="{ group: 'controls' }" class="button-primary button-outline"><i class="fa fa-hospital-o" aria-hidden="true"></i><br>Hospitals</plat-button>
             <plat-button plat-options="{ group: 'controls' }" class="button-primary button-outline"><i class="fa fa-user-md" aria-hidden="true"></i><br>MD's</plat-button>
             <plat-button plat-options="{ group: 'controls' }" class="button-primary button-outline"><i class="fa fa-home" aria-hidden="true"></i><br>Nursing Homes</plat-button>
         </div>
     </div>
     <div>
-        <h2>Step 1:</h2>
-            <span>{{radio.text}}</span>
+        <h2>Step 2:</h2>
             <br>
         <p>Select a category of care</p>
             <plat-radio plat-bind="radio.text">Emergency</plat-radio>
@@ -43,7 +43,7 @@
     </div>
 
     <div class="bodypart-select">
-    <h2>Step 2:</h2>
+    <h2>Step 3:</h2>
     <p>Choose a body part</p>
     <plat-select plat-context="parts">
         <option value="{{id}}">{{text}}</option>
@@ -51,34 +51,39 @@
     </div>
 
     <div class="distance-slider">
-        <h2>Step 3:</h2>
+        <h2>Step 4:</h2>
         <p>Choose a geographic area</p>
         <span>Distance: {{slider.distance}} miles</span>
         <plat-slider plat-bind="slider.distance" plat-options="{ min: 5, max: 25 }"></plat-slider>
     </div>
     <div class="show-results">
-        <plat-button class="button-primary">Show Hospitals</plat-button>
-    </div>
-     <span>{{radio.text}}, {{slider.distance}} miles, Hospitals</span>
-    <br>
+        <plat-button class="button-primary" plat-tap="toggleResults('results')" plat-options="{ transition: 'fade' }">Show Hospitals</plat-button>
+        <!--Results-->
+        <div class="card" plat-options="{ transition: 'fade' }" plat-bind="results">
+            <div class="input-data">
+            <span>{{radio.text}}, {{slider.distance}} miles, Hospitals</span>
+            </div>
+        <br>
 
-    <div class="button-group">
-        <plat-button plat-options="{ group: 'controls' }" class="button-success" plat-tap="goHere()"><i class="fa fa-smile-o" aria-hidden="true"></i><br><b>Go</b> here</plat-button>
-        <plat-button plat-options="{ group: 'controls' }" class="button-caution" plat-tap="maybeHere()"><i class="fa fa-meh-o" aria-hidden="true"></i><br><b>Maybe</b> here</plat-button>
-        <plat-button plat-options="{ group: 'controls' }" class="button-danger" plat-tap="whyHere()"><i class="fa fa-frown-o" aria-hidden="true"></i><br><b>Why</b> here</plat-button>
-    </div>
-    <br>
-    <div class="card-container">
-        <div class="button-group card-row">
-            <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">Hospital Name</plat-button>
-            <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">JoePatient</plat-button>
-            <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">User Stories</plat-button>
+        <div class="button-group">
+            <plat-button plat-options="{ group: 'controls' }" class="button-success" plat-tap="goHere()"><i class="fa fa-smile-o" aria-hidden="true"></i><br><b>Go</b> here</plat-button>
+            <plat-button plat-options="{ group: 'controls' }" class="button-caution" plat-tap="maybeHere()"><i class="fa fa-meh-o" aria-hidden="true"></i><br><b>Maybe</b> here</plat-button>
+            <plat-button plat-options="{ group: 'controls' }" class="button-danger" plat-tap="whyHere()"><i class="fa fa-frown-o" aria-hidden="true"></i><br><b>Why</b> here</plat-button>
         </div>
-        <div class="card-content">
+        <br>
+        <div class="card-container">
+            <div class="button-group card-row">
+                <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">Hospital Name</plat-button>
+                <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">JoePatient</plat-button>
+                <plat-button plat-options="{ group: 'controls' }" class="button-success button-outline">User Stories</plat-button>
+            </div>
+            <div class="card-content">
+                <p>blah, blah, blah</p>
+            </div>
 
         </div>
+        </div>
     </div>
-
 <div class="bottom-container">
     <h2>Testamonials</h2>
         <blockquote>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."

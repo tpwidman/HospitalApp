@@ -7,13 +7,13 @@ export default class BlogViewControl extends BaseViewControl {
     context: any = {
         posts: [
             {
-                title:'First post', content:'first content', author:'john'
+                title:'First post', content:'first content', author:'John Smith'
             },
             {
-                title:'Second post', content:'second content', author:'jane'
+                title:'Second post', content:'second content', author:'Jane Smith'
             },
             {
-                title:'Third post', content:'third content', author:'jim'
+                title:'Third post', content:'third content', author:'Jim Smith'
             }
         ]
     };

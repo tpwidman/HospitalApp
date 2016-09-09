@@ -6,7 +6,7 @@ export default class HomeViewControl extends BaseViewControl {
 
     context: any = {
         carouselItems: [
-            { text: 'carousel thing 1', bg: 'rgba(192,192,192,0.4)' },
+            { text: 'carousel thing 1', bg: 'rgba(192,192,192,0.4)'},
             { text: 'carousel thing 2', bg: 'rgba(143,222,177,0.4)' },
             { text: 'carousel thing 3', bg: 'rgba(118,182,246,0.4)' }
             ],

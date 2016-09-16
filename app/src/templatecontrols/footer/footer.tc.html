@@ -7,6 +7,26 @@
             <a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i> twitter</a>
             <a href="https://www.facebook.com"> <i class="fa fa-facebook" aria-hidden="true"></i> facebook</a>
             <a href="https://www.reddit.com"><i class="fa fa-reddit" aria-hidden="true"></i> reddit</a>
+        <br>
+            <plat-button class="button-primary" plat-tap="toggleModal('modal1')">Contact us</plat-button>
+            <!-- The Modal -->
+        <plat-modal plat-options="{ transition: 'fade' }" plat-bind="modal1" class="modal-prompt">
+            <div class="prompt-title">Download here</div>
+            <div class="prompt-body">            
+                <h3>Shoot us a message</h3>
+                    <div class="input-group">
+                        <plat-input type="text" placeholder="Name"></plat-input>
+                        <plat-input type="email" placeholder="Email"></plat-input>
+                        <plat-input type="text" placeholder="Message"></plat-input>
+                    </div>
+            </div>
+            <div class="prompt-action">
+                <div class="row">
+                    <plat-button class="button-primary" plat-tap="toggleModal('modal1')">Submit</plat-button>
+                    <plat-button class="button-danger" plat-tap="toggleModal('modal1')">Close</plat-button>
+                </div>
+            </div>
+        </plat-modal>
         </div>
 
         <!--center-->
@@ -14,34 +34,20 @@
         <!-- Button that calls the modal -->
         <div class="app-download">
             <h3>Download the app</h3>
-        <plat-button class="button-primary" plat-tap="toggleModal('modal1')">Show Modal</plat-button>
-            <!-- The Modal -->
-        <plat-modal plat-options="{ transition: 'fade' }" plat-bind="modal1" class="modal-prompt">
-            <div class="prompt-title">Download here</div>
-            <div class="prompt-body">
-                <p>Select type:</p>
-            </div>
-            <div class="prompt-action">
-                <div class="row">
-                <plat-button class="button-primary button-outline" plat-tap="toggleModal('modal1')">Android</plat-button>
-                <plat-button class="button-primary button-outline" plat-tap="toggleModal('modal1')">iOS</plat-button>
-                </div>
-                <plat-button class="button-danger" plat-tap="toggleModal('modal1')">Close</plat-button>
-            </div>
-        </plat-modal>
+                <plat-button class="button-primary button-outline">Android</plat-button>
+                <plat-button class="button-primary button-outline">iOS</plat-button>
         </div>
 
         </div>
 
         <!--right-->
         <div class="col-dsk-4">
-            <h3>Shoot us a message</h3>
-            <div class="input-group">
-                    <plat-input type="text" placeholder="Name"></plat-input>
-                    <plat-input type="email" placeholder="Email"></plat-input>
-                    <plat-input type="text" placeholder="Message"></plat-input>
-                <plat-button class="button-primary">Submit</plat-button>
-            </div>
+            <ul class="link-column">
+                <plat-link plat-options="{view: homeView}"><li>Home</li></plat-link>
+                <plat-link plat-options="{view: aboutView}"><li>About</li></plat-link>
+                <plat-link plat-options="{view: contactView}"><li>Contact</li></plat-link>
+                <plat-link plat-options="{view: blogView}"><li>Blog</li></plat-link>
+            </ul>
         </div>
     </div>
     <div class="app-logo">

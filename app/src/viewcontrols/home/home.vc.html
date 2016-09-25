@@ -58,9 +58,11 @@
         <span>Distance: {{slider.distance}} miles</span>
         <plat-slider plat-bind="slider.distance" plat-options="{ min: 5, max: 25 }"></plat-slider>
     </div>
-    <div class="show-results">
-        <plat-button class="button-primary" plat-tap="toggleResults('results')" plat-options="{ transition: 'fade' }">Show Hospitals</plat-button>
-        <!--Results-->
+
+    <plat-button class="button-primary" plat-tap="toggleResults('results')" plat-options="{ transition: 'fade' }">Show Hospitals</plat-button>
+
+    <!--Results-->
+    <div class="results">
         <div class="card" plat-options="{ transition: 'fade' }" plat-bind="results">
             <div class="input-data">
             <span>{{radio.text}}, {{slider.distance}} miles, Hospitals</span>

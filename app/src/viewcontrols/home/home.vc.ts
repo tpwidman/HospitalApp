@@ -6,9 +6,15 @@ export default class HomeViewControl extends BaseViewControl {
 
     context: any = {
         carouselItems: [
-            { text: 'carousel thing 1', bg: 'rgba(192,192,192,0.4)'},
-            { text: 'carousel thing 2', bg: 'rgba(143,222,177,0.4)' },
-            { text: 'carousel thing 3', bg: 'rgba(118,182,246,0.4)' }
+            { text: 'Find the Best Hospital for your Needs', 
+              image: '../assets/images/jp_1_edit.jpg'
+            },
+            { text: 'Sometimes the Fastest Answer is not the Best',
+              image: '../assets/images/jp_2_edit.jpg'
+            },
+            { text: 'Where is your loved one really?',
+              image: '../assets/images/jp_4_edit.jpg'
+            }
             ],
         parts: [
             { id: 0, text:'Lungs and Respitory System' },

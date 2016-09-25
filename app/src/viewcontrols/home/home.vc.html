@@ -2,13 +2,10 @@
 <h1>Home page</h1>
 
 <label for="carousel"></label>
-<plat-carousel plat-context="carouselItems" plat-options="{ type: 'tap' }">
-    <div class="carousel-item" plat-style="background-color: {{bg}}">
-        <span class="carousel-text">{{text}}</span>
-        <br>
-        <br>
+<plat-carousel plat-context="carouselItems" style="width:100%; height:600px" plat-options="{ type: 'tap' }">
+    <div class="carousel-item" plat-style= "background-image: url({{image}}); background-size:contain; background-repeat:no-repeat; width:100%; height:800px">
+        <h2 class="carousel-header">{{text}}</h2>
     </div>
-    <p>thing</p>
 </plat-carousel>
 <div class="top-container">
     <h1>thing 1</h1>
@@ -16,7 +13,9 @@
 </div>
 
 <div class="mid-container">
-    <h2>thing 2</h2>
+    <img src="../assets/images/Jp_iphone_edit.jpg">
+
+<h2>thing 2</h2>
 <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
 </div>
 
@@ -68,10 +67,11 @@
             <span>{{radio.text}}, {{slider.distance}} miles, Hospitals</span>
             </div>
         <br>
-
+        <div class="row">
             <plat-button plat-options="{ group: 'controls' }" class="button-success" plat-tap="goHere()"><i class="fa fa-smile-o" aria-hidden="true"></i><br><b>Go</b> here</plat-button>
             <plat-button plat-options="{ group: 'controls' }" class="button-caution" plat-tap="maybeHere()"><i class="fa fa-meh-o" aria-hidden="true"></i><br><b>Maybe</b> here</plat-button>
             <plat-button plat-options="{ group: 'controls' }" class="button-danger" plat-tap="whyHere()"><i class="fa fa-frown-o" aria-hidden="true"></i><br><b>Why</b> here</plat-button>
+        </div>
         <br>
         <div class="card-container">
             <div class="button-group card-row">
@@ -79,8 +79,8 @@
                 <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">JoePatient</plat-button>
                 <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">User Stories</plat-button>
             </div>
-            <div class="card-content">
-                <p>blah, blah, blah</p>
+            <div class="card-content" style="border:1px solid green; padding 10px">
+                <p>{{text}}</p>
             </div>
             <plat-button class="button-primary button-outline">Refresh</plat-button>
         </div>

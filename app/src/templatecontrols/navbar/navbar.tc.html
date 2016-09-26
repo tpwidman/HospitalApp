@@ -6,7 +6,11 @@
     <!--Desktop Nav-->
     <div class="navbar-right">
         <ul class="row">
-            <plat-link plat-options="{view: homeView}"><li><img src="./assets/images/app-white.svg" class="logo"></li><li><h2>JoePatient</h2></li></plat-link>
+            <plat-link plat-options="{view: homeView}"><li><img src="./assets/images/app-white.svg" class="logo"></li>
+                <div class="mobile-toggle" plat-tap="toggleModal('mobileModal')">
+                    <li><i class="fa fa-bars fa-3x"></i></li>
+                </div>
+            </plat-link>
 
             <div class="full-screen-options" plat-visible="true">
                 <plat-link plat-options="{view: homeView}"><li>Home</li></plat-link>

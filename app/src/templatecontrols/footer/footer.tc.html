@@ -4,15 +4,15 @@
         <div class="col-dsk-4 first">
             <div class="row">
                 <h3>Connect with us</h3>
-                <plat-button class="button-primary button-outline"><a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></plat-button>
-                <plat-button class="button-primary button-outline"><a href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a></plat-button>
-                <plat-button class="button-primary button-outline"><a href="https://www.facebook.com"> <i class="fa fa-facebook" aria-hidden="true"></i></a></plat-button>
+                <plat-button class="button-success"><a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></plat-button>
+                <plat-button class="button-success"><a href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a></plat-button>
+                <plat-button class="button-success"><a href="https://www.facebook.com"> <i class="fa fa-facebook" aria-hidden="true"></i></a></plat-button>
             </div>
         <br />
-            <plat-button class="button-primary" plat-tap="toggleModal('modal1')">Contact us</plat-button>
+        <plat-button class="button-success button-outline" plat-tap="toggleModal('contactModal')">Contact us</plat-button>
             <!-- The Modal -->
-        <plat-modal plat-options="{ transition: 'fade' }" plat-bind="modal1" class="modal-prompt">
-            <div class="prompt-title">Download here</div>
+        <plat-modal plat-options="{ transition: 'fade' }" plat-bind="contactModal" class="modal-prompt">
+            <div class="prompt-title">What's up?</div>
             <div class="prompt-body">            
                 <h3>Shoot us a message</h3>
                     <div class="input-group">
@@ -23,8 +23,8 @@
             </div>
             <div class="prompt-action">
                 <div class="row">
-                    <plat-button class="button-primary" plat-tap="toggleModal('modal1')">Submit</plat-button>
-                    <plat-button class="button-danger" plat-tap="toggleModal('modal1')">Close</plat-button>
+                    <plat-button class="button-primary" plat-tap="toggleModal('contactModal')">Submit</plat-button>
+                    <plat-button class="button-danger" plat-tap="toggleModal('contactModal')">Close</plat-button>
                 </div>
             </div>
         </plat-modal>
@@ -34,7 +34,7 @@
         <div class="col-dsk-4">
         <!-- Button that calls the modal -->
         <div class="app-download">
-            <h3>Download the app</h3>
+            <h3>Download</h3>
             <div class="row">
                 <img plat-tap="alert('gothere')" src="../assets/images/app-store-badge.png">
                 <img plat-tap="alert('gohere')" src="../assets/images/google-play-badge.png">
@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="app-logo">
-        <p><i class="fa fa-copyright" aria-hidden="true"></i> 2016 JoePatient</p>
+        <h2><i class="fa fa-copyright" aria-hidden="true"></i> 2016 JoePatient</h2>
         <p><a href="tel:18888888888"><i class="fa fa-phone-square" aria-hidden="true">  1-888-888-8888</i></a></p>
     </div>
 </div>    

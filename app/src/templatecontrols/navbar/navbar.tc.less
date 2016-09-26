@@ -17,14 +17,14 @@
         float: left;
         padding:2em;
     }
-    li a {
+    li {
         display:block;
         text-align: center;
         padding: 2.5em;
         text-decoration: none;
-    }
-    li a:hover {
-        background-color: #111111;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     .logo{
         height: 2.5em;
@@ -33,11 +33,19 @@
         float:right;
     }
 }
-
-@media only screen and (max-width:700px){
-    .full-screen-options{
-        display:none;
+    @media only screen and (min-width:700px){
+        .mobile-toggle{
+            display:none;
+        }
     }
-}
 
+    @media only screen and (max-width:700px){
+        .full-screen-options{
+            display:none;
+        }
+        .mobile-toggle{
+            display:inherit;
+            float:right;
+        }
+    }
 }

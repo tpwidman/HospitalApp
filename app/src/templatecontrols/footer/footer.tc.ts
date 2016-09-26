@@ -14,7 +14,7 @@ export default class FooterTemplateControl extends ui.TemplateControl {
         blogView: BlogViewControl
     };
     toggleModal(): void {
-        this.context.modal1 = !this.context.modal1;
+        this.context.contactModal = !this.context.contactModal;
     };
 
 }

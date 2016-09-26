@@ -1,6 +1,9 @@
-<div class="column">
+<plat-modal plat-options="{ transition: 'down' }" plat-bind="mobileModal">
+    <div class="column">
+    <plat-button class="button-danger" plat-tap="toggleModal('modal1')"><i class="fa fa-times"></i></plat-button>
     <plat-link plat-options="{view: homeView}"><li>Home</li></plat-link>
     <plat-link plat-options="{view: aboutView}"><li>About</li></plat-link>
     <plat-link plat-options="{view: contactView}"><li>Contact</li></plat-link>
     <plat-link plat-options="{view: blogView}"><li>Blog</li></plat-link>
-</div>
+    </div>
+</plat-modal>

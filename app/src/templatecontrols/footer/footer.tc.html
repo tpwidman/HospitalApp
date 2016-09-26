@@ -1,13 +1,14 @@
 <div class="footer">
     <div class="row">
-
         <!--left-->
-        <div class="col-dsk-4">
-            <h3>Connect with us</h3>
-            <a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i> twitter</a>
-            <a href="https://www.facebook.com"> <i class="fa fa-facebook" aria-hidden="true"></i> facebook</a>
-            <a href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i> linked-in</a>
-        <br>
+        <div class="col-dsk-4 first">
+            <div class="row">
+                <h3>Connect with us</h3>
+                <plat-button class="button-primary button-outline"><a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></plat-button>
+                <plat-button class="button-primary button-outline"><a href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a></plat-button>
+                <plat-button class="button-primary button-outline"><a href="https://www.facebook.com"> <i class="fa fa-facebook" aria-hidden="true"></i></a></plat-button>
+            </div>
+        <br />
             <plat-button class="button-primary" plat-tap="toggleModal('modal1')">Contact us</plat-button>
             <!-- The Modal -->
         <plat-modal plat-options="{ transition: 'fade' }" plat-bind="modal1" class="modal-prompt">
@@ -34,8 +35,10 @@
         <!-- Button that calls the modal -->
         <div class="app-download">
             <h3>Download the app</h3>
-                <plat-button><img src="../images/app-store-badge.png"></plat-button>
-                <plat-button><img src="../images/google-play-badge.png"></plat-button>
+            <div class="row">
+                <img plat-tap="alert('gothere')" src="../assets/images/app-store-badge.png">
+                <img plat-tap="alert('gohere')" src="../assets/images/google-play-badge.png">
+            </div>
         </div>
 
         </div>

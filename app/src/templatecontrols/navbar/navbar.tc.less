@@ -4,27 +4,40 @@
     #platui > #variables;
 
     [plat-control="navbar"] {
-
-ul {
-    list-style-type: none;
-    outline: 1px solid black;
-}
-li{
-    float: left;
-    padding:2em;
-}
-li a {
-    display:block;
-    text-align: center;
-    padding: 2.5em;
-    text-decoration: none;
-}
-li a:hover {
-    background-color: #111111;
-}
-.logo{
-    height: 2.5em;
-}
-
+    .navbar-right{
+        background-color: @dark-blue;
     }
+    ul {
+        list-style-type: none;
+        outline: 1px solid black;
+    }
+    li{
+        size: 18px;
+        color: white;
+        float: left;
+        padding:2em;
+    }
+    li a {
+        display:block;
+        text-align: center;
+        padding: 2.5em;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: #111111;
+    }
+    .logo{
+        height: 2.5em;
+    }
+    .full-screen-options{
+        float:right;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .full-screen-options{
+        display:none;
+    }
+}
+
 }

@@ -20,73 +20,70 @@
 <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
 </div>
 
-<div class="sample-rating-card">
+<div class="sample-rating-card col-phn-12">
     <h1>How it works</h1>
-    <div class="first-div">
+    <div class="first-div steps col-phn-4 col-phn-offset-2">
         <h2>Step 1:</h2>
         <p>Select one to begin</p>
-        <br>
         <div class="row ">
-            <plat-button plat-options="{ group: 'controls' }" class="button-primary button-outline"><i class="fa fa-hospital-o fa-5x" aria-hidden="true"></i><br>Hospitals</plat-button>
-            <plat-button plat-options="{ group: 'controls' }" class="button-primary button-outline"><i class="fa fa-user-md fa-5x" aria-hidden="true"></i><br>MD's</plat-button>
-            <plat-button plat-options="{ group: 'controls' }" class="button-primary button-outline"><i class="fa fa-home fa-5x" aria-hidden="true"></i><br>Nursing Homes</plat-button>
+            <plat-button plat-options="{ group: 'first' }" class="button-primary button-outline"><i class="fa fa-user-md fa-5x" aria-hidden="true"></i><br>MD's</plat-button>
+            <plat-button plat-options="{ group: 'first' }" class="button-primary button-outline"><i class="fa fa-hospital-o fa-5x" aria-hidden="true"></i><br>Hospitals</plat-button>
+            <plat-button plat-options="{ group: 'first' }" class="button-primary button-outline"><i class="fa fa-home fa-5x" aria-hidden="true"></i><br>Nursing Homes</plat-button>
         </div>
     </div>
-    <div>
+    <div class="second-div steps col-phn-4">
         <h2>Step 2:</h2>
-            <br>
         <p>Select a category of care</p>
-            <plat-radio plat-bind="radio.text">Emergency</plat-radio>
-            <br>
-            <plat-radio plat-bind="radio.text">Children's</plat-radio>
-            <br>
-            <plat-radio plat-bind="radio.text">Adult</plat-radio>
-            <br>
+            <plat-button plat-options="{ group: 'second' }" class="button-primary button-outline"><i class="fa fa-heartbeat fa-5x" aria-hidden="true"></i><br>Emergency</plat-button>
+            <plat-button plat-options="{ group: 'second' }" class="button-primary button-outline"><i class="fa fa-child fa-5x" aria-hidden="true"></i><br>Children's</plat-button>
+            <plat-button plat-options="{ group: 'second' }" class="button-primary button-outline"><i class="fa fa-users fa-5x" aria-hidden="true"></i><br>Adult</plat-button>
     </div>
-
-    <div class="bodypart-select">
-    <h2>Step 3:</h2>
-    <p>Choose a body part</p>
-    <plat-select plat-context="parts">
+    <div class="third-div steps col-phn-4 col-phn-offset-2">
+        <h2>Step 3:</h2>
+        <p>Choose a body part</p>
+            <plat-select plat-context="parts">
+            <plat-button plat-options="{ group: 'third' }" class="button-primary button-outline"><i class="fa fa-heartbeat fa-5x" aria-hidden="true"></i><br>Emergency</plat-button>
+            <plat-button plat-options="{ group: 'third' }" class="button-primary button-outline"><i class="fa fa-child fa-5x" aria-hidden="true"></i><br>Children's</plat-button>
+            <plat-button plat-options="{ group: 'third' }" class="button-primary button-outline"><i class="fa fa-users fa-5x" aria-hidden="true"></i><br>Adult</plat-button>
         <option value="{{id}}">{{text}}</option>
     </plat-select>
     </div>
-
-    <div class="distance-slider">
+    <div class="fourth-div steps col-phn-4">
         <h2>Step 4:</h2>
         <p>Choose a geographic area</p>
         <span>Distance: {{slider.distance}} miles</span>
         <plat-slider plat-bind="slider.distance" plat-options="{ min: 5, max: 25 }"></plat-slider>
     </div>
-
+</div>
+    <hr>
     <plat-button class="button-primary" plat-tap="toggleResults('results')" plat-options="{ transition: 'fade' }">Show Hospitals</plat-button>
-
+    <br>
     <!--Results-->
-    <div class="results">
-        <div class="card" plat-options="{ transition: 'fade' }" plat-bind="results">
-            <div class="input-data">
+<div class="results">
+    <div class="card" plat-options="{ transition: 'fade' }" plat-bind="results">
+        <div class="input-data">
             <span>{{radio.text}}, {{slider.distance}} miles, Hospitals</span>
-            </div>
-        <br>
-        <div class="row">
-            <plat-button plat-options="{ group: 'controls' }" class="button-success" plat-tap="goHere()"><i class="fa fa-smile-o" aria-hidden="true"></i><br><b>Go</b> here</plat-button>
-            <plat-button plat-options="{ group: 'controls' }" class="button-caution" plat-tap="maybeHere()"><i class="fa fa-meh-o" aria-hidden="true"></i><br><b>Maybe</b> here</plat-button>
-            <plat-button plat-options="{ group: 'controls' }" class="button-danger" plat-tap="whyHere()"><i class="fa fa-frown-o" aria-hidden="true"></i><br><b>Why</b> here</plat-button>
         </div>
-        <br>
-        <div class="card-container">
-            <div class="button-group card-row">
-                <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">Hospital Name</plat-button>
-                <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">JoePatient</plat-button>
-                <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">User Stories</plat-button>
-            </div>
-            <div class="card-content" style="border:1px solid green; padding 10px">
-                <p>{{text}}</p>
-            </div>
-            <plat-button class="button-primary button-outline">Refresh</plat-button>
+<br>
+    <div class="row">
+        <plat-button plat-options="{ group: 'controls' }" class="button-success" plat-tap="goHere()"><i class="fa fa-smile-o" aria-hidden="true"></i><br><b>Go</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-caution" plat-tap="maybeHere()"><i class="fa fa-meh-o" aria-hidden="true"></i><br><b>Maybe</b> here</plat-button>
+        <plat-button plat-options="{ group: 'controls' }" class="button-danger" plat-tap="whyHere()"><i class="fa fa-frown-o" aria-hidden="true"></i><br><b>Why</b> here</plat-button>
+    </div>
+<br>
+    <div class="card-container">
+        <div class="button-group card-row">
+            <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">Hospital Name</plat-button>
+            <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">JoePatient</plat-button>
+            <plat-button plat-tap="showContent" plat-options="{ group: 'controls' }" class="button-success button-outline">User Stories</plat-button>
         </div>
+        <div class="card-content" style="border:1px solid green; padding 10px">
+            <p>{{text}}</p>
         </div>
     </div>
+    <plat-button class="button-primary button-outline">Refresh</plat-button>
+    </div>
+</div>
 <div class="bottom-container">
     <h2>Testamonials</h2>
         <blockquote>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."

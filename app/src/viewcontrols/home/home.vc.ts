@@ -16,6 +16,11 @@ export default class HomeViewControl extends BaseViewControl {
               image: '../assets/images/jp_4_edit.jpg'
             }
             ],
+        categories: {
+            first: 'Hospital',
+            second: 'MDs',
+            third: 'Nursing Homes'
+        },
         parts: [
             { id: 0, text:'Lungs and Respitory System' },
             { id: 1, text:'Heart and Circulatory System' },
